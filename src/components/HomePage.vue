@@ -17,6 +17,18 @@
        <li>
         <router-link to="/exFive">Exercise Five</router-link>
       </li>
+      <li>
+        <router-link to="/exSix">Exercise Six</router-link>
+      </li>
+      <li>
+        <router-link to="/exSeven">Exercise Seven</router-link>
+      </li>
+      <li>
+        <router-link to="/exEight">Exercise Eight</router-link>
+      </li>
+      <li>
+        <router-link to="/exNine">Exercise Nine</router-link>
+      </li>
     </ul>
   </div>
 </template>

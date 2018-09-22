@@ -4,7 +4,6 @@
       <router-link to="/">Return to Homepage</router-link>
     </li>
     <h1>{{msg}}</h1>
-    <p>{{subtitle}}</p>
 
     <p>1. Start the Effect with the Button.
     The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick.
@@ -39,14 +38,13 @@ export default {
   data() {
     return {
       msg: "vue js Excercise 4",
-      subtitle: "work under progress.",
       effectClasses: {
         highlight: false,
         shrink: true
       },
       progressBar: {
-        width: '0px',
-        backgroundColor: 'green'
+        width: "0px",
+        backgroundColor: "green"
       }
     };
   },
@@ -63,7 +61,7 @@ export default {
       let width = 0;
       setInterval(function() {
         width = width + 20;
-        vm.progressBar.width = width + 'px';
+        vm.progressBar.width = width + "px";
       }, 50);
     }
   }
@@ -71,51 +69,51 @@ export default {
 </script>
 
 <style>
-  h1,
-  h2 {
-    font-weight: normal;
-    color: #42b983;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  #effect {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-  }
+h1,
+h2 {
+  font-weight: normal;
+  color: #42b983;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+#effect {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
 
-  .highlight {
-    background-color: red;
-    width: 200px !important;
-    background-color: cyan;
-  }
+.highlight {
+  background-color: red;
+  width: 200px !important;
+  background-color: cyan;
+}
 
-  .shrink {
-    background-color: gray;
-    width: 50px !important;
-    background-color: blue;
-  }
+.shrink {
+  background-color: gray;
+  width: 50px !important;
+  background-color: blue;
+}
 
-  .black {
-    background-color: #000
-  }
+.black {
+  background-color: #000;
+}
 
-  .whiteText {
-    color: #ffffff
-  }
+.whiteText {
+  color: #ffffff;
+}
 
-  .progress-bar {
+.progress-bar {
   width: 100px;
   height: 30px;
   border: 1px solid;
-  }
+}
 </style>

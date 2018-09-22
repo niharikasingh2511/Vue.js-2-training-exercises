@@ -4,7 +4,6 @@
       <router-link to="/">Return to Homepage</router-link>
     </li>
     <h1>{{msg}}</h1>
-    <p>{{subtitle}}</p>
 
     <p>1. Hook up the button to toggle the display of the two paragraphs.
     Use both v-if and v-show and inspect the elements to see the difference </p>
@@ -47,7 +46,6 @@ export default {
   data() {
     return {
       msg: "vue js Excercise 5",
-      subtitle: "work under progress.",
       isToggle: true,
       items: ["Biblo", "Frudo", "Gandalf", "Sam"],
       myObject: {
