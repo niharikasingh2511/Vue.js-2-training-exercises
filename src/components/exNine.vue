@@ -4,7 +4,6 @@
       <router-link to="/">Return to Homepage</router-link>
     </li>
     <h1>{{msg}}</h1>
-    <p>{{subtitle}}</p>
 
      <div class="container">
         <div class="row">
@@ -15,6 +14,10 @@
                 <p>Eg - v-custom-on:click="function"</p>
                 <!-- Hint - Think about native addEventListener -->
 
+            <div class="custom-directive-container" v-custom-on:click="eventCallback">click me</div>
+                <div class="custom-directive-container" v-custom-on:mouseover="eventCallback">hover over me</div>
+                <hr />
+                <div>You performed: {{ eventName }}</div>
             </div>
         </div>
     </div>
@@ -27,8 +30,13 @@ export default {
   data() {
     return {
       msg: "vue js Excercise 9",
-      subtitle: "work under progress."
+      eventName: ""
     };
+  },
+  methods: {
+    eventCallback(event) {
+      this.eventName = event.type;
+    }
   }
 };
 </script>
@@ -49,5 +57,13 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.custom-directive-container {
+  margin: 5px;
+  padding: 5px;
+  border: 5px solid #42b983;
+  width: 500px;
+  position: relative;
 }
 </style>

@@ -7,11 +7,23 @@ Vue.use(VueSweetalert2);
 
 Vue.config.productionTip = false;
 
+Vue.directive("custom-on", {
+  bind(el, binding) {
+    const eventName = binding.arg;
+    const eventCallback = binding.value;
+    el.addEventListener(eventName, e => {
+      eventCallback(e);
+    });
+  }
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: "#app",
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: "<App/>",
   render: h => h(App)
 });
